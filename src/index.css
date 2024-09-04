@@ -1,0 +1,28 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --input-bg: #f0f0f0;
+  --input-text: #000000;
+}
+
+.dark {
+  --bg-color: #10141E; /* Background color for dark mode */
+  --text-color: #ffffff;
+  --input-bg: #10141E; /* Input field background color in dark mode */
+  --input-text: #ffffff; /* Input field text color in dark mode */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+input {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+}
