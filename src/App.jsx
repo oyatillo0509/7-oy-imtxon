@@ -1,17 +1,14 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
-import Home from './Pages/Home';
-import Save from './Pages/Save';
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Info from "./Pages/Info";
 
 function App() {
   return (
-    <ThemeProvider>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/save" element={<Save />} />
-      </Routes>
-    </ThemeProvider>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/info/:slug" element={<Info />} />
+    </Routes>
   );
 }
 
