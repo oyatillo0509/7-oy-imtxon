@@ -46,18 +46,18 @@ const SearchAndFilter = () => {
         console.error("Error fetching data:", error);
       }
     },
-    [dispatch] 
+    [dispatch]
   );
 
   return (
-    <div className="max-w-screen-xl mx-auto px-20 mt-12">
-      <div className="flex justify-between items-center space-x-4">
-        <div className="relative flex-1">
+    <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+        <div className="relative flex-1 w-full">
           <input
             onChange={onChangeInput}
             type="text"
             placeholder="Search for a country..."
-            className="w-3/12 p-2 pl-10 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+            className="w-full md:w-3/12 p-2 pl-10 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
           />
           <svg
             className="absolute left-2 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
@@ -77,10 +77,10 @@ const SearchAndFilter = () => {
             <span className="loading loading-spinner loading-lg"></span>
           </div>
         )}
-        <div>
+        <div className="w-full md:w-auto">
           <select
             onChange={onChangeSelect}
-            className="p-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
+            className="w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring focus:border-blue-300"
           >
             <option value="all">Filter by Region</option>
             <option value="Africa">Africa</option>

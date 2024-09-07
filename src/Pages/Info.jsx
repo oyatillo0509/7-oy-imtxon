@@ -23,36 +23,32 @@ const CountryInfo = () => {
       {singleData ? (
         <>
           <div className="flex flex-col p-6  min-h-screen items-center">
-            {/* Back Button */}
             <div className="w-full max-w-4xl mb-6">
               <button className="text-blue-600 hover:text-blue-800 font-medium">
                 <Link to="/"> ← Back</Link>
               </button>
             </div>
 
-            {/* Main Content */}
-            <div className="flex flex-col md:flex-row items-start shadow-md p-6 rounded-lg w-full max-w-4xl">
-              {/* Flag Image */}
+            <div className="flex flex-col md:flex-row shadow-md p-6 rounded-lg w-full max-w-5xl h-auto md:h-96 items-center">
               <div className="mb-6 md:mb-0 md:mr-8">
                 <img
                   src={singleData.flags.svg}
                   alt="Belgium Flag"
-                  className="w-full h-48 md:w-64 md:h-48 object-cover rounded-lg shadow-sm "
+                  className="w-full h-48 object-cover rounded-lg shadow-sm"
                 />
               </div>
 
-              {/* Country Info */}
               <div className="flex-1">
                 <h1 className="text-3xl font-bold mb-4">
                   {singleData.name.common}
                 </h1>
-                <ul className="text-base space-y-2 flex justify-between">
+                <ul className="text-base space-y-2 flex flex-col md:flex-row justify-between">
                   <div className="left">
                     <li>
                       <strong>Native Name:</strong> {singleData.name.nativeName}
                     </li>
                     <li>
-                      <strong>Population:</strong>{" "}
+                      <strong>Population:</strong>
                       {singleData.population.toLocaleString("en-US")}
                     </li>
                     <li>
@@ -67,7 +63,7 @@ const CountryInfo = () => {
                   </div>
                   <div className="right">
                     <li>
-                      <strong>Top Level Domain:</strong> .be
+                      <strong>Top Level Domain:</strong> {singleData.cioc}
                     </li>
                     <li>
                       <strong>Currencies:</strong> {singleData.currencies}
@@ -79,7 +75,6 @@ const CountryInfo = () => {
                   </div>
                 </ul>
 
-                {/* Border Countries */}
                 <div className="mt-6">
                   <strong>Border Countries:</strong>
                   <div className="flex flex-wrap gap-2 mt-2">

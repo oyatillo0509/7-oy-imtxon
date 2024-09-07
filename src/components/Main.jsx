@@ -7,7 +7,6 @@ import { setAllData } from "../features/data";
 
 const BASE_URL = "https://frontend-mentor-apis-6efy.onrender.com";
 
-// CountryCard component
 const CountryCard = ({ country }) => {
   return (
     <Link
